@@ -1,0 +1,29 @@
+@mixin mobile(){
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet(){
+  @media screen and (min-width: $tablet), print {
+    @content;
+  }
+}
+
+@mixin desktop(){
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin touch(){
+  @media screen and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin from($device){
+  @media screen and (min-width: $device){
+    @content
+  }
+}

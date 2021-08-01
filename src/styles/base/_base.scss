@@ -1,0 +1,48 @@
+body,html {
+  padding:0;
+  margin:0;
+}
+
+body {
+  font-family: $family-primary;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+
+  @include touch {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include from(1088px) {
+    max-width: 960px;
+    width: 960px;
+  }
+
+  @include from(1280px) {
+    max-width: 1152px;
+    width: 1152px;
+  }
+
+  @include from(1440px) {
+    max-width: 1344px;
+    width: 1344px;
+  }
+}
