@@ -1,0 +1,94 @@
+@import "../../styles/index";
+
+.root {
+  display: flex;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  align-items: center;
+
+  @include touch() {
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse {
+  @include desktop() {
+    flex-direction: row-reverse;
+  }
+}
+
+.center {
+ flex-direction: column-reverse;
+}
+
+.textWrapper {
+  width: 50%;
+
+  @include touch() {
+    width: 100%;
+  }
+}
+
+.noImage {
+  @include desktop() {
+    transform: translateX(50%);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: $green;
+  border-radius: 2px;
+  font-size: 21px;
+  line-height: 29px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: $white;
+  padding: 9.5px 32.5px;
+
+  &:hover {
+    background-color: $green-dark;
+  }
+}
+
+.mgb {
+  margin-bottom: 32px;
+}
+
+.mgt {
+  margin-top: 32px;
+}
+
+.parentImageWrapper {
+  width: 50%;
+
+  @include touch() {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.parentImageWrapperCenter {
+  @include desktop() {
+    width: 25%;
+    margin-bottom: 40px;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.left {
+  text-align: center;
+}
